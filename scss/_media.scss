@@ -1,0 +1,208 @@
+//Header
+@media (max-width: 500px) {
+	body {
+		background: #181f2a;
+	}
+	.container {
+		padding: 0 0.5rem;
+	}
+	.main-header {
+		.main-nav {
+			margin: 1rem 0;
+			img {
+				width: 20%;
+				height: 4vh;
+			}
+			ul {
+				margin: 0;
+				padding: 0;
+				a {
+					margin: 0 0.5rem;
+					font-size: 0.9rem;
+				}
+			}
+		}
+		// header content
+		.main-content {
+			.hero-img {
+				margin-top: 2rem;
+				width: 100%;
+			}
+			.description {
+				padding: 0 2rem;
+				padding-bottom: 4rem;
+				h1 {
+					font-size: 1.5rem;
+					padding: 0.5rem;
+				}
+				p {
+					padding: 0.2rem;
+					opacity: 0.8;
+				}
+			}
+		}
+	}
+	// main sections
+	.main-section {
+		.features {
+			&:before {
+				content: '';
+				background: url('../images/bg-curvy-mobile.svg');
+				background-repeat: no-repeat;
+				top: -4%;
+				right: 1%;
+				background-size: 100%;
+			}
+			.d-grid {
+				grid-template-columns: 1fr;
+				img {
+					height: 10vh;
+				}
+				.feature:first-child {
+					margin-top: 8rem;
+				}
+				.feature:nth-child(2) {
+					margin-top: 0;
+				}
+			}
+		}
+		// productivity
+		.section-productive {
+			.contents {
+				flex-direction: column;
+				margin-top: 4rem;
+			}
+			.productive-hero {
+				margin: 0 1rem;
+			}
+			.productive-description {
+				margin: 0 1rem;
+				h2 {
+					font-size: 1.2rem;
+					padding: 0.5rem 0.2rem;
+				}
+				p {
+					font-size: 0.9rem;
+					padding: 0.3rem 0.2rem;
+				}
+			}
+		}
+		//Testimonials
+		.section-testimonials {
+			padding: 1rem 0;
+			.testimonials {
+				flex-direction: column;
+				.testimonial {
+					&:first-child {
+						&:before {
+							top: 4%;
+						}
+					}
+					margin: 1rem;
+					padding: 1rem;
+				}
+			}
+		}
+		// call to action
+		.call-to-action {
+			.container {
+				padding: 1rem 0.8rem;
+				margin-left: 1.5rem;
+				margin-right: 1.5rem;
+				h2 {
+					font-size: 1.1rem;
+					margin: 0 0.2rem;
+				}
+				p {
+					padding: 0.2rem 1rem;
+					font-size: 0.9rem;
+				}
+				.form-group {
+					flex-direction: column;
+					input {
+						width: auto;
+					}
+					small {
+						bottom: 42%;
+						left: 20%;
+					}
+					button {
+						margin-top: 1rem;
+					}
+				}
+			}
+		}
+	}
+	//Footer
+	.main-footer {
+		.logo-footer {
+			margin-left: 2rem;
+			margin-bottom: 1rem;
+		}
+		.footer-content {
+			margin-left: 1rem;
+			flex-direction: column;
+			.menu {
+				margin-left: -1.6rem;
+				padding: 0;
+			}
+			.socials {
+				margin: 1rem;
+				padding: 0;
+				align-self: center;
+				margin-top: 2rem;
+				.link {
+					margin: 0 0.5rem;
+				}
+			}
+		}
+	}
+}
+// Landscape
+@media (max-height: 450px) {
+	.main-content {
+		img {
+			width: 60%;
+		}
+	}
+	.description {
+		padding: 0 4rem !important;
+		p {
+			padding: 0.2rem 3rem !important;
+		}
+	}
+	.features {
+		&:before {
+			top: -10% !important;
+		}
+	}
+	.productive-description {
+		h2 {
+			padding: 0 !important;
+		}
+		p {
+			font-size: 0.9rem;
+		}
+	}
+	.testimonial {
+		margin: 4rem 1rem !important;
+	}
+	.call-to-action {
+		.container {
+			margin-left: 4rem !important;
+			margin-right: 4rem !important;
+		}
+	}
+	.footer-content {
+		gap: 0.5rem !important;
+		font-size: 0.9rem !important;
+		.menu {
+			height: 50vh;
+		}
+		.socials {
+			height: 50vh;
+			flex-direction: column;
+			justify-content: space-around;
+		}
+	}
+}

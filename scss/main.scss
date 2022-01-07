@@ -1,0 +1,273 @@
+@import 'config';
+@import 'utilities';
+
+body {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Open Sans', sans-serif;
+}
+h1,
+h2,
+h3 {
+	font-family: 'Raleway', sans-serif;
+}
+// header
+.main-header {
+	//navbar
+	.main-nav {
+		margin: 1.5rem 0;
+		justify-content: space-between;
+		align-items: center;
+		img {
+			height: 40px;
+		}
+	}
+	//Header content
+	.main-content {
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		text-align: center;
+		.description {
+			z-index: 10;
+			padding: 0 14rem;
+			padding-bottom: 4rem;
+			p {
+				padding: 0.2rem 6rem;
+			}
+		}
+		.hero-img {
+			width: 50%;
+		}
+	}
+}
+// main sections
+.main-section {
+	position: relative;
+	.features {
+		&:before {
+			content: '';
+			position: absolute;
+			background: url('../images/bg-curvy-desktop.svg');
+			background-repeat: no-repeat;
+			background-size: 100%;
+			height: 100vh;
+			width: 100%;
+			top: -20%;
+		}
+		.feature {
+			img {
+				margin-bottom: 1rem;
+				height: 14vh;
+			}
+			h2 {
+				font-size: 1.5rem;
+				margin: 0.5rem;
+			}
+			p {
+				padding: 0 1.5rem;
+				opacity: 0.8;
+				margin: 0.2rem auto;
+				font-size: 0.9rem;
+			}
+		}
+	}
+	.section-productive {
+		.contents {
+			margin-top: 6rem;
+			align-items: center;
+		}
+		.productive-hero {
+			flex: 1;
+		}
+		.productive-description {
+			flex: 1;
+			margin-left: 4rem;
+			h2 {
+				padding-right: 10rem;
+				font-size: 2rem;
+			}
+			p {
+				opacity: 0.8;
+			}
+			.sign-up {
+				margin: 0;
+				padding-bottom: 0.1rem;
+			}
+		}
+	}
+	.section-testimonials {
+		.testimonials {
+			position: relative;
+			padding: 2rem 0;
+			.testimonial:first-child {
+				&:before {
+					content: '';
+					position: absolute;
+					background: url('../images/bg-quotes.png');
+					background-repeat: no-repeat;
+					background-size: 100%;
+					height: 100%;
+					width: 60px;
+					top: 20%;
+					left: 3%;
+					z-index: -10;
+				}
+			}
+			.testimonial {
+				margin: 4rem 2rem;
+				padding: 1rem 2rem;
+				p {
+					font-size: 0.9rem;
+					opacity: 0.9;
+				}
+				div {
+					display: flex;
+					img {
+						border-radius: 50%;
+						height: 40px;
+						width: 40px;
+					}
+					.author {
+						flex-direction: column;
+						margin-left: 0.5rem;
+						p {
+							margin: 0;
+						}
+						small {
+							opacity: 0.7;
+						}
+					}
+				}
+			}
+		}
+	}
+	.call-to-action {
+		background: $dark-blue-main;
+		.container {
+			margin-left: 14rem;
+			margin-right: 14rem;
+			margin-bottom: -10rem;
+			padding: 1rem 2rem;
+			h2 {
+				font-size: 2rem;
+				margin: 1rem;
+				letter-spacing: 0.5px;
+			}
+			p {
+				padding: 0.5rem 5rem;
+				opacity: 0.8;
+			}
+			.form-group {
+				position: relative;
+				margin: 1.5rem auto;
+				display: flex;
+				justify-content: center;
+				gap: 1rem;
+				input {
+					outline: 0;
+					padding: 0.9rem 1rem;
+					border-radius: 20px;
+					border: none;
+					font-size: 1rem;
+					width: 40%;
+					transition: all 0.5s;
+					&:focus {
+						outline: 0;
+					}
+				}
+				small {
+					position: absolute;
+					bottom: -50%;
+					left: 15%;
+				}
+				button {
+					padding: 0.9rem 3rem;
+				}
+			}
+		}
+	}
+}
+//Footer
+.main-footer {
+	.footer-content {
+		justify-content: space-evenly;
+		align-items: baseline;
+		gap: 1rem;
+		.location {
+			flex: 3;
+			display: flex;
+			align-items: flex-start;
+			img {
+				width: 20px;
+				height: 20px;
+				margin-top: 1rem;
+				margin-right: 1rem;
+			}
+			p {
+				padding-right: 2rem;
+			}
+		}
+		.contact {
+			flex: 1;
+			img {
+				margin-right: 1rem;
+				width: 20px;
+				height: 20px;
+			}
+			span {
+				opacity: 0.7;
+			}
+			&-phone {
+				display: flex;
+				margin-bottom: 1rem;
+			}
+			&-email {
+				display: flex;
+			}
+		}
+		.menu {
+			display: block;
+			flex: 1;
+			a {
+				transition: all 0.2s;
+				&:hover {
+					border-bottom: none;
+					opacity: 1;
+				}
+			}
+			li:not(:first-child) {
+				margin: 1rem 0;
+			}
+		}
+		.socials {
+			flex: 1;
+			.link {
+				padding: 0.3rem 0.5rem;
+				border: 1px solid $white;
+				border-radius: 50%;
+				margin: 0;
+				&:hover {
+					color: $cyan-color;
+					border: 1px solid $cyan-color;
+				}
+			}
+		}
+	}
+	.attribution {
+		text-align: center;
+		margin-top: 2rem;
+		margin-bottom: 0;
+		a {
+			margin: 0.5rem 0;
+
+			color: $blue-color;
+			&:hover {
+				border: 0;
+			}
+		}
+	}
+}
+
+@import 'media';
