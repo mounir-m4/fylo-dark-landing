@@ -27,7 +27,7 @@ Users should be able to:
 - Sign up for newsletter
   
 ### Links
-- Live Site URL: [https://fylo-dark-landing.netlify.app]()
+- Page preview : https://fylo-dark-landing.netlify.app/
 
 
 ### Screenshot
